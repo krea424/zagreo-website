@@ -43,10 +43,10 @@ export default function PrivacyPolicy() {
                             relativa al trattamento dei dati personali, è possibile contattare
                             il Titolare all&apos;indirizzo email:{" "}
                             <a
-                                href="mailto:domenico.quaglio.consulting@gmail.com"
+                                href="mailto:domenico@zagreo.io"
                                 className="text-amber-500 hover:text-amber-400"
                             >
-                                domenico.quaglio.consulting@gmail.com
+                                domenico@zagreo.io
                             </a>
                         </p>
                     </section>

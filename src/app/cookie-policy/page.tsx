@@ -178,10 +178,10 @@ export default function CookiePolicy() {
                             Per qualsiasi domanda relativa a questa Cookie Policy, puoi
                             contattarci all&apos;indirizzo:{" "}
                             <a
-                                href="mailto:domenico.quaglio.consulting@gmail.com"
+                                href="mailto:domenico@zagreo.io"
                                 className="text-amber-500 hover:text-amber-400"
                             >
-                                domenico.quaglio.consulting@gmail.com
+                                domenico@zagreo.io
                             </a>
                         </p>
                     </section>

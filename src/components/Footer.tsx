@@ -62,7 +62,7 @@ export default function Footer() {
                                         className="inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-amber-500"
                                     >
                                         <Mail size={16} />
-                                        domenico.quaglio.consulting@gmail.com
+                                        domenico@zagreo.io
                                     </a>
                                 </li>
                             </ul>
