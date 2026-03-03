@@ -22,7 +22,7 @@ export default function Header() {
                     {/* Logo - Using img tag for direct control */}
                     <Link href="/" className="flex-shrink-0">
                         <img
-                            src="/logo-transparent.png"
+                            src="/logo.png"
                             alt="ZAGREO Strategic Consulting"
                             className="h-14 w-auto md:h-16 lg:h-20"
                         />
