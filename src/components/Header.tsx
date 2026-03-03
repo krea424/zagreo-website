@@ -23,7 +23,7 @@ export default function Header() {
                         <img
                             src="/logo-dark.png"
                             alt="ZAGREO Consulenza Strategica"
-                            className="h-32 w-auto md:h-40 lg:h-48 -my-8"
+                            className="h-8 w-auto md:h-9 lg:h-10"
                         />
                     </Link>
 
