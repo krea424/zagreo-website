@@ -5,11 +5,7 @@ import { Quote } from "lucide-react";
 
 export default function Principal() {
     return (
-        <section id="vision" className="relative py-32 overflow-hidden">
-            {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950" />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:80px_80px]" />
-
+        <section id="vision" className="relative py-32 overflow-hidden bg-cream-50">
             <div className="container relative z-10 mx-auto max-w-6xl px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -21,21 +17,17 @@ export default function Principal() {
                     {/* Visual Element */}
                     <div className="relative flex-shrink-0">
                         <div className="relative h-72 w-72 lg:h-80 lg:w-80">
-                            {/* Gradient ring */}
-                            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-amber-500/20 via-transparent to-transparent" />
+                            {/* Soft ring */}
+                            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-teal-100 via-transparent to-cream-200" />
 
                             {/* Main circle */}
-                            <div className="absolute inset-2 rounded-full border border-slate-700/50 bg-slate-900/80 backdrop-blur-sm" />
+                            <div className="absolute inset-2 rounded-full border border-warm-200 bg-white" />
 
                             {/* Inner content */}
-                            <div className="absolute inset-4 flex flex-col items-center justify-center rounded-full bg-gradient-to-br from-slate-800 to-slate-900">
-                                <span className="font-display text-6xl font-bold text-white lg:text-7xl">DQ</span>
-                                <span className="mt-2 text-sm font-medium tracking-widest text-amber-500">PRINCIPAL</span>
+                            <div className="absolute inset-4 flex flex-col items-center justify-center rounded-full bg-gradient-to-br from-cream-100 to-cream-200">
+                                <span className="font-display text-6xl text-warm-800 lg:text-7xl">DQ</span>
+                                <span className="mt-2 text-sm font-medium tracking-widest text-teal-700 uppercase">Fondatore</span>
                             </div>
-
-                            {/* Decorative elements */}
-                            <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-amber-500/10 blur-2xl" />
-                            <div className="absolute -bottom-4 -left-4 h-32 w-32 rounded-full bg-slate-700/20 blur-2xl" />
                         </div>
                     </div>
 
@@ -47,45 +39,46 @@ export default function Principal() {
                             viewport={{ once: true }}
                             transition={{ delay: 0.2, duration: 0.6 }}
                         >
-                            <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-widest text-amber-500">
-                                Vision
+                            <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-widest text-teal-700">
+                                Chi Siamo
                             </span>
 
-                            <h2 className="mb-6 font-display text-4xl font-bold text-white md:text-5xl">
+                            <h2 className="mb-6 font-display text-4xl text-warm-900 md:text-5xl">
                                 Guidati da{" "}
-                                <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+                                <span className="text-teal-700">
                                     Domenico Quaglio
                                 </span>
                             </h2>
 
                             <div className="relative mb-8">
-                                <Quote size={32} className="absolute -left-2 -top-2 text-amber-500/20" />
-                                <p className="pl-8 text-xl leading-relaxed text-slate-300">
-                                    Business Analyst, Senior Project Manager e Vibe Coder.
+                                <Quote size={32} className="absolute -left-2 -top-2 text-teal-200" />
+                                <p className="pl-8 text-xl leading-relaxed text-warm-600">
+                                    Business Analyst, Senior Project Manager e appassionato di innovazione tecnologica.
                                 </p>
                             </div>
 
-                            <p className="text-lg leading-relaxed text-slate-400">
-                                ZAGREO è l&apos;estensione operativa di un&apos;esperienza decennale,
-                                potenziata da un&apos;infrastruttura AI proprietaria. Un ponte tra
-                                competenza consulenziale senior e innovazione tecnologica applicata.
+                            <p className="text-lg leading-relaxed text-warm-500">
+                                ZAGREO nasce da oltre dieci anni di esperienza nella consulenza
+                                strategica, oggi potenziata dall&apos;intelligenza artificiale. Un ponte
+                                tra competenza operativa e innovazione, al servizio della
+                                crescita della tua azienda.
                             </p>
 
                             {/* Credentials */}
                             <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
-                                <span className="rounded-full border border-slate-700 bg-slate-800/50 px-4 py-1.5 text-sm text-slate-400">
+                                <span className="rounded-full border border-warm-200 bg-white px-4 py-1.5 text-sm text-warm-600">
                                     Banking
                                 </span>
-                                <span className="rounded-full border border-slate-700 bg-slate-800/50 px-4 py-1.5 text-sm text-slate-400">
-                                    BPM
+                                <span className="rounded-full border border-warm-200 bg-white px-4 py-1.5 text-sm text-warm-600">
+                                    Project Management
                                 </span>
-                                <span className="rounded-full border border-slate-700 bg-slate-800/50 px-4 py-1.5 text-sm text-slate-400">
-                                    Data
+                                <span className="rounded-full border border-warm-200 bg-white px-4 py-1.5 text-sm text-warm-600">
+                                    Gestione Dati
                                 </span>
-                                <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-sm text-amber-400">
-                                    AI Agents
+                                <span className="rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-sm text-teal-700">
+                                    Intelligenza Artificiale
                                 </span>
-                                <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-sm text-amber-400">
+                                <span className="rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-sm text-teal-700">
                                     Real Estate
                                 </span>
                             </div>

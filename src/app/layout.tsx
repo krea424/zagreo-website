@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,16 +8,17 @@ const inter = Inter({
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const dmSerif = DM_Serif_Display({
+  variable: "--font-dm-serif",
   subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "ZAGREO Strategic Consulting | Digital Authority Hub",
-  description: "Intelligence Operativa per l'Era dell'AI. ZAGREO orchestra strategia, conformità normativa e tecnologia.",
-  keywords: ["Strategic Consulting", "AI Process Automation", "Document Intelligence", "ThinkSuite", "Vibe Coding"],
+  title: "ZAGREO | Consulenza Strategica e Innovazione Operativa",
+  description: "Trasformiamo i processi della tua azienda con strategia, tecnologia e intelligenza artificiale. Più efficienza, meno complessità.",
+  keywords: ["Consulenza Strategica", "Ottimizzazione Processi", "Intelligenza Artificiale", "Business Analysis", "Project Management", "ThinkSuite"],
 };
 
 export default function RootLayout({
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="it" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${inter.variable} ${dmSerif.variable} antialiased`}
       >
         {children}
       </body>
