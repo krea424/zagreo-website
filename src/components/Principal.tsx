@@ -44,7 +44,7 @@ const experience = [
         highlight: false,
     },
     {
-        role: "Presidente",
+        role: "Amministratore Delegato",
         org: "Cosenza Calcio",
         description:
             "Pianificazione e coordinamento del Centenario del club, integrando operations, comunicazione e stakeholder engagement per oltre 20.000 partecipanti.",
@@ -219,11 +219,10 @@ export default function Principal() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.1 + i * 0.07, duration: 0.5 }}
-                                className={`rounded-2xl border p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md ${
-                                    exp.highlight
+                                className={`rounded-2xl border p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md ${exp.highlight
                                         ? "border-teal-200 bg-teal-50/50 shadow-sm shadow-teal-100"
                                         : "border-warm-200 bg-white hover:border-teal-200"
-                                }`}
+                                    }`}
                             >
                                 <div className="mb-1 flex items-start justify-between gap-3 flex-wrap">
                                     <div>
@@ -270,13 +269,12 @@ export default function Principal() {
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: 0.05 * i, duration: 0.3 }}
-                                        className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
-                                            i < 1
+                                        className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${i < 1
                                                 ? "border border-teal-200 bg-teal-700 text-white"
                                                 : i < 3
-                                                ? "border border-teal-200 bg-teal-50 text-teal-800"
-                                                : "border border-warm-200 bg-cream-100 text-warm-700"
-                                        }`}
+                                                    ? "border border-teal-200 bg-teal-50 text-teal-800"
+                                                    : "border border-warm-200 bg-cream-100 text-warm-700"
+                                            }`}
                                     >
                                         {c}
                                     </motion.span>
