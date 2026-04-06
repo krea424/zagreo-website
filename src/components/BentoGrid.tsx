@@ -39,10 +39,10 @@ function FeatureCard({
             transition={{ duration: 0.5, delay, ease: [0.16, 1, 0.3, 1] }}
             whileHover={{ y: -4 }}
             className={clsx(
-                "group relative flex flex-col overflow-hidden rounded-2xl border p-8 transition-all duration-300",
+                "card-glow group relative flex flex-col overflow-hidden rounded-2xl border p-8 transition-all duration-300",
                 highlight
                     ? "border-teal-200 bg-teal-50/50 shadow-lg shadow-teal-100/50"
-                    : "border-warm-200 bg-white hover:border-teal-200 hover:shadow-lg hover:shadow-teal-50",
+                    : "border-warm-200 bg-white hover:border-teal-200/60 hover:-translate-y-1",
                 className
             )}
         >
@@ -140,28 +140,33 @@ export default function BentoGrid() {
                     transition={{ duration: 0.7, delay: 0.2 }}
                     className="mt-8"
                 >
-                    <div className="relative overflow-hidden rounded-3xl border border-teal-200 bg-white p-10 shadow-xl shadow-teal-50 lg:p-14">
+                    <div className="relative overflow-hidden rounded-3xl bg-warm-900 p-10 shadow-2xl shadow-warm-900/20 lg:p-14">
+                        {/* Subtle dot grid on dark card */}
+                        <div className="absolute inset-0 bg-dot-grid opacity-[0.06]" />
+                        {/* Teal glow top-right */}
+                        <div className="absolute -top-16 -right-16 h-64 w-64 rounded-full bg-teal-600/20 blur-[80px]" />
+
                         <div className="relative z-10">
                             <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
                                 <div className="max-w-3xl">
                                     {/* Badge */}
-                                    <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-sm font-semibold text-teal-700">
+                                    <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-400/10 px-4 py-1.5 text-sm font-semibold text-teal-400">
                                         <Lightbulb size={14} />
                                         La Nostra Piattaforma
                                     </div>
 
                                     {/* Title */}
-                                    <h3 className="mb-4 font-display text-3xl text-warm-900 md:text-4xl">
+                                    <h3 className="mb-4 font-display text-3xl text-white md:text-4xl">
                                         ThinkSuite
                                     </h3>
-                                    <p className="mb-2 text-xl text-warm-600">
+                                    <p className="mb-2 text-xl text-warm-300">
                                         Gestione della Conoscenza Aziendale
                                     </p>
-                                    <p className="mb-8 text-lg italic text-teal-700/80">
+                                    <p className="mb-8 text-lg italic text-teal-400/80">
                                         &ldquo;Dal pensiero fluido agli asset strutturati.&rdquo;
                                     </p>
 
-                                    <p className="mb-8 text-lg text-warm-500">
+                                    <p className="mb-8 text-lg text-warm-400">
                                         Una piattaforma sviluppata internamente per trasformare
                                         informazioni destrutturate in conoscenza organizzata e
                                         pronta all&apos;uso.
@@ -170,48 +175,48 @@ export default function BentoGrid() {
                                     {/* Features Grid */}
                                     <div className="grid gap-6 sm:grid-cols-2">
                                         <div className="flex gap-4">
-                                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-teal-50">
-                                                <Zap size={20} className="text-teal-600" />
+                                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white/8">
+                                                <Zap size={20} className="text-teal-400" />
                                             </div>
                                             <div>
-                                                <h4 className="font-semibold text-warm-800">Acquisizione Intelligente</h4>
-                                                <p className="text-sm text-warm-500">
+                                                <h4 className="font-semibold text-white">Acquisizione Intelligente</h4>
+                                                <p className="text-sm text-warm-400">
                                                     Analizza audio, documenti e file estraendo automaticamente le informazioni chiave.
                                                 </p>
                                             </div>
                                         </div>
 
                                         <div className="flex gap-4">
-                                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-teal-50">
-                                                <Brain size={20} className="text-teal-600" />
+                                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white/8">
+                                                <Brain size={20} className="text-teal-400" />
                                             </div>
                                             <div>
-                                                <h4 className="font-semibold text-warm-800">Comprensione Semantica</h4>
-                                                <p className="text-sm text-warm-500">
+                                                <h4 className="font-semibold text-white">Comprensione Semantica</h4>
+                                                <p className="text-sm text-warm-400">
                                                     Collega automaticamente concetti e documenti per trovare relazioni nascoste.
                                                 </p>
                                             </div>
                                         </div>
 
                                         <div className="flex gap-4">
-                                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-teal-50">
-                                                <FileCheck size={20} className="text-teal-600" />
+                                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white/8">
+                                                <FileCheck size={20} className="text-teal-400" />
                                             </div>
                                             <div>
-                                                <h4 className="font-semibold text-warm-800">Documenti Affidabili</h4>
-                                                <p className="text-sm text-warm-500">
+                                                <h4 className="font-semibold text-white">Documenti Affidabili</h4>
+                                                <p className="text-sm text-warm-400">
                                                     Genera report e deliverable basati su dati verificati, mai su supposizioni.
                                                 </p>
                                             </div>
                                         </div>
 
                                         <div className="flex gap-4">
-                                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-teal-50">
-                                                <Lock size={20} className="text-teal-600" />
+                                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white/8">
+                                                <Lock size={20} className="text-teal-400" />
                                             </div>
                                             <div>
-                                                <h4 className="font-semibold text-warm-800">Sicurezza Aziendale</h4>
-                                                <p className="text-sm text-warm-500">
+                                                <h4 className="font-semibold text-white">Sicurezza Aziendale</h4>
+                                                <p className="text-sm text-warm-400">
                                                     I tuoi dati restano tuoi. Accesso controllato e protezione completa delle informazioni.
                                                 </p>
                                             </div>
@@ -225,7 +230,7 @@ export default function BentoGrid() {
                                         href="https://rec2pdfweb.vercel.app"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group inline-flex items-center gap-3 rounded-xl bg-teal-700 px-8 py-4 font-semibold text-white shadow-lg shadow-teal-700/15 transition-all duration-300 hover:bg-teal-800 hover:shadow-teal-700/25"
+                                        className="group inline-flex items-center gap-3 rounded-xl bg-teal-500 px-8 py-4 font-semibold text-white shadow-lg shadow-teal-500/20 transition-all duration-300 hover:bg-teal-400 hover:-translate-y-px"
                                     >
                                         Prova la Piattaforma
                                         <ExternalLink
@@ -233,7 +238,7 @@ export default function BentoGrid() {
                                             className="transition-transform group-hover:translate-x-1"
                                         />
                                     </a>
-                                    <p className="text-sm text-warm-400">
+                                    <p className="text-sm text-warm-500">
                                         Accesso sicuro
                                     </p>
                                 </div>
