@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, DM_Serif_Display } from "next/font/google";
+import { Inter, Space_Grotesk, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,10 +8,18 @@ const inter = Inter({
   display: "swap",
 });
 
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
 const dmSerif = DM_Serif_Display({
   variable: "--font-dm-serif",
   subsets: ["latin"],
   weight: "400",
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -29,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="it" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${dmSerif.variable} antialiased`}
+        className={`${inter.variable} ${spaceGrotesk.variable} ${dmSerif.variable} antialiased`}
       >
         {children}
       </body>

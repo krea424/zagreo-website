@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import ParticleField from "./ParticleField";
 
 const metrics = [
     { value: "30+", label: "Anni di Esperienza" },
@@ -12,54 +13,52 @@ const metrics = [
 
 export default function Hero() {
     return (
-        <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cream-50">
-            {/* Dot grid background */}
-            <div className="absolute inset-0 z-0 bg-dot-grid opacity-[0.45]" />
-
-            {/* Radial fade — dot grid brighter in center */}
+        <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-ink-950">
+            {/* Constellation grid + particle field + aurora */}
+            <div className="absolute inset-0 z-0 bg-constellation opacity-70" />
+            <ParticleField />
+            <div className="aurora pointer-events-none absolute left-1/2 top-[34%] z-0 h-[620px] w-[820px] -translate-x-1/2 -translate-y-1/2" />
+            {/* Vignette to seat the content */}
             <div
-                className="absolute inset-0 z-0"
+                className="pointer-events-none absolute inset-0 z-0"
                 style={{
                     background:
-                        "radial-gradient(ellipse 80% 60% at 50% 40%, transparent 40%, #FEFDFB 100%)",
+                        "radial-gradient(ellipse 75% 55% at 50% 42%, transparent 35%, rgba(6,16,14,0.85) 100%)",
                 }}
             />
 
-            {/* Teal ambient glow — top right */}
-            <div className="absolute top-[-5%] right-[-5%] h-[560px] w-[560px] rounded-full bg-teal-100/50 blur-[120px] z-0" />
-            {/* Warm ambient glow — bottom left */}
-            <div className="absolute bottom-[-10%] left-[-5%] h-[440px] w-[440px] rounded-full bg-cream-300/60 blur-[100px] z-0" />
-
-            <div className="container relative z-10 mx-auto px-6 py-28 text-center">
+            <div className="container relative z-10 mx-auto px-6 py-32 text-center">
                 <motion.div
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 36 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
                     className="mx-auto max-w-5xl"
                 >
-                    {/* Eyebrow badge */}
+                    {/* Eyebrow */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
+                        initial={{ opacity: 0, scale: 0.92 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.15, duration: 0.5 }}
-                        className="mb-10 inline-flex items-center gap-2.5 rounded-full border border-teal-200/80 bg-white/80 px-5 py-2.5 text-sm font-medium text-warm-700 shadow-sm backdrop-blur-sm"
+                        className="mb-9 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2 text-sm font-medium text-mist-300 backdrop-blur-sm"
                     >
                         <span
-                            className="h-2 w-2 rounded-full bg-teal-500"
-                            style={{ animation: "pulse-dot 2s cubic-bezier(0.4,0,0.6,1) infinite" }}
+                            className="h-2 w-2 rounded-full bg-teal-400"
+                            style={{ animation: "pulse-dot 2.4s cubic-bezier(0.4,0,0.6,1) infinite" }}
                         />
                         <span>Consulenza Strategica & AI</span>
                     </motion.div>
 
-                    {/* Main Headline */}
-                    <h1 className="mb-8 font-display font-normal leading-[1.05] tracking-tight text-warm-900"
-                        style={{ fontSize: "clamp(3rem, 9vw, 7.5rem)" }}>
-                        La tua azienda,{" "}
-                        <br className="hidden sm:block" />
-                        <span className="text-teal-700">
+                    {/* Headline — grotesk + italic-serif accent */}
+                    <h1
+                        className="mb-8 font-display font-medium leading-[1.02] tracking-tight text-chalk"
+                        style={{ fontSize: "clamp(2.9rem, 8.5vw, 7rem)" }}
+                    >
+                        La tua azienda,
+                        <br className="hidden sm:block" />{" "}
+                        <span className="font-serif italic font-normal text-gradient-teal">
                             più efficiente
                         </span>
-                        .
+                        <span className="text-teal-400">.</span>
                     </h1>
 
                     {/* Subtitle */}
@@ -67,7 +66,7 @@ export default function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3, duration: 0.7 }}
-                        className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-warm-500 sm:text-xl"
+                        className="mx-auto mb-11 max-w-2xl text-lg leading-relaxed text-mist-400 sm:text-xl"
                     >
                         Ottimizziamo i tuoi processi aziendali con strategia, conformità normativa
                         e intelligenza artificiale. Meno complessità, più risultati.
@@ -78,18 +77,18 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.45, duration: 0.6 }}
-                        className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                        className="flex flex-col items-center justify-center gap-4 sm:flex-row"
                     >
                         <a
                             href="#thinksuite"
-                            className="group inline-flex items-center gap-2.5 rounded-full bg-teal-700 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-teal-700/20 transition-all duration-300 hover:bg-teal-800 hover:shadow-teal-700/30 hover:-translate-y-px"
+                            className="group inline-flex items-center gap-2.5 rounded-full bg-teal-400 px-8 py-4 text-base font-semibold text-ink-950 shadow-[0_0_40px_-8px_rgba(45,212,191,0.5)] transition-all duration-300 hover:bg-teal-300 hover:-translate-y-px"
                         >
                             Scopri ThinkSuite
                             <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
                         </a>
                         <a
                             href="#expertise"
-                            className="inline-flex items-center gap-2 rounded-full border border-warm-300 bg-white/70 backdrop-blur-sm px-8 py-4 text-base font-medium text-warm-700 transition-all duration-300 hover:border-teal-300 hover:bg-white hover:text-teal-700"
+                            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-medium text-mist-300 backdrop-blur-sm transition-all duration-300 hover:border-teal-400/40 hover:text-chalk"
                         >
                             I Nostri Servizi
                         </a>
@@ -101,17 +100,14 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7, duration: 0.7 }}
-                    className="mt-20 flex flex-wrap items-stretch justify-center divide-x divide-warm-200"
+                    className="mt-20 flex flex-wrap items-stretch justify-center divide-x divide-white/10"
                 >
                     {metrics.map((m) => (
-                        <div
-                            key={m.label}
-                            className="flex flex-col items-center px-8 py-4 sm:px-12"
-                        >
-                            <span className="font-display text-3xl leading-none text-warm-900 md:text-4xl">
+                        <div key={m.label} className="flex flex-col items-center px-8 py-3 sm:px-12">
+                            <span className="font-display text-3xl font-semibold leading-none text-chalk md:text-4xl">
                                 {m.value}
                             </span>
-                            <span className="mt-2 text-xs tracking-wide text-warm-400 uppercase">
+                            <span className="mt-2 text-[11px] uppercase tracking-[0.18em] text-mist-500">
                                 {m.label}
                             </span>
                         </div>
@@ -119,8 +115,8 @@ export default function Hero() {
                 </motion.div>
             </div>
 
-            {/* Bottom fade into next section */}
-            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream-100 to-transparent z-10 pointer-events-none" />
+            {/* Fade into next section */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-t from-ink-950 to-transparent" />
         </section>
     );
 }
