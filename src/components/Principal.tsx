@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Award, TrendingUp, Users, Building2, MapPin, Mail, Globe } from "lucide-react";
+import Image from "next/image";
 
 const impactMetrics = [
     { value: "30+", label: "Anni di Esperienza", icon: <TrendingUp size={18} /> },
@@ -131,9 +132,15 @@ export default function Principal() {
                             <div className="relative h-40 w-40">
                                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-teal-200 via-teal-50 to-cream-200" />
                                 <div className="absolute inset-[3px] rounded-full bg-white" />
-                                <div className="absolute inset-[6px] flex flex-col items-center justify-center rounded-full bg-gradient-to-br from-cream-100 to-cream-200">
-                                    <span className="font-display text-5xl leading-none text-warm-800">DQ</span>
-                                    <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-teal-700">Fondatore</span>
+                                <div className="absolute inset-[6px] overflow-hidden rounded-full">
+                                    <Image
+                                        src="/foto_cv_2026.jpeg"
+                                        alt="Domenico Quaglio"
+                                        fill
+                                        className="object-cover"
+                                        sizes="160px"
+                                        priority
+                                    />
                                 </div>
                             </div>
                             {/* Contact chips */}
